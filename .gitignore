@@ -1,0 +1,14 @@
+# Ignore everything in repository root
+/*
+
+.idea
+
+# Files to not ignore
+!/.gitignore
+!/package.json
+!/package-lock.json
+!/README.md
+!/.prettierrc
+
+# Folder to not ignore
+!/src/

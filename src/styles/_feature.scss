@@ -1,0 +1,111 @@
+.section {
+  &__features {
+    padding: 152px 60px 200px 60px;
+    position: relative;
+
+    @media screen and (max-width: 376px) {
+      padding: 100px 20px 200px 20px;
+    }
+
+    .feature {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      //height: 400px;
+      margin-bottom: 44px;
+      padding: 52px 52px 52px 100px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+      border-radius: 20px;
+      gap: 32px;
+
+      @media screen and (max-width: 376px) {
+        flex-direction: column-reverse;
+        padding: 32px 20px;
+      }
+
+      .container {
+        &__text {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          gap: 16px;
+
+          @media screen and (max-width: 376px) {
+            text-align: center;
+            align-items: center;
+          }
+
+          h2 {
+            @media screen and (max-width: 376px) {
+              font-size: 24px;
+            }
+          }
+
+          p {
+            color: var(--grayish-blue);
+          }
+        }
+
+        &__image {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+
+          .image {
+            width: 400px;
+
+            @media screen and (max-width: 376px) {
+              height: auto;
+              width: 90%;
+            }
+          }
+        }
+      }
+
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+        gap: 60px;
+
+        @media screen and (max-width: 376px) {
+          flex-direction: column-reverse;
+        }
+
+        .container {
+          &__image {
+            justify-content: flex-start;
+          }
+        }
+      }
+    }
+
+    .cta {
+      background-color: #fff;
+      padding: 48px 0;
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      position: absolute;
+      bottom: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+
+      @media screen and (max-width: 376px) {
+        max-width: 342px;
+        text-align: center;
+        padding: 30px 0;
+        font-size: 12px;
+      }
+    }
+  }
+}
